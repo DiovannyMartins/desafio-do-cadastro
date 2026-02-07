@@ -2,14 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
+:root {
+    --cor01: #414143;
+    --cor02: #737278;
+    --cor03: #A2A2AA;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Young Serif", serif;
 }
+
 body {
-    background-color: #555555;
+    background-image: linear-gradient(to right, var(--cor03), var(--cor01));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,10 +25,11 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: var(--cor02);
     width: 500px;
     height: 450px;
     border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -37,7 +45,7 @@ h1::after {
     content: "";
     width: 55px;
     height: 3px;
-    background-color: #666666;
+    background-color: rgba(0, 0, 0, 0.6);
     left: 0;
     transform: translate(25px, 40px);
 }
@@ -47,6 +55,12 @@ form {
     flex-direction: column;
     gap: 10px;
     padding: 0 25px;
+}
+
+input {
+    background-color: var(--cor03);
+    font-size: 15px;
+    border: none;
 }
 
 #nome {
@@ -65,7 +79,9 @@ form {
 }
 
 button {
+    background-color: var(--cor03);
     padding: 10px 0 10px 20px;
     margin-top: 20px;
     border-radius: 15px;
+    font-weight: bolder;
 }
